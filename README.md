@@ -12,11 +12,11 @@ For connecting and Using the Resources of AWS Cloud, boto3 library is required a
 Role Variables
 --------------
 
-1.imageId - This variable should be used to pass the id of the image used to launch the instances.
-2.instType - This variable is used to specify the type of ec2 instance like t2.micro is one of the example.
-3.region - Used to specify the region in which you want to launch the instance
-4.sg - specify the security group name
-5.key - Used to specify the key with its proper path  
+1. imageId - This variable should be used to pass the id of the image used to launch the instances.
+2. instType - This variable is used to specify the type of ec2 instance like t2.micro is one of the example.
+3. region - Used to specify the region in which you want to launch the instance
+4. sg - specify the security group name
+5. key - Used to specify the key with its proper path  
 
 Example Playbook
 ----------------
@@ -30,7 +30,7 @@ Including an example of how to use your role (for instance, with variables passe
 License
 -------
 
-BSD
+MIT
 
 Author Information
 ------------------

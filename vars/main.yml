@@ -1,0 +1,8 @@
+---
+# vars file for ec2_launcher
+imageId: 'ami-0bcf5425cdc1d8a85'
+instType: 't2.micro'
+region: 'ap-south-1'
+sg: 'launch-wizard-4'
+key: 'Mumbaikey'
+vpcSubnet: 'subnet-933930fb'

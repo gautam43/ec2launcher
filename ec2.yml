@@ -1,5 +1,13 @@
----
-# tasks file for ec2_launcher
+- hosts: localhost
+  vars:
+         - imageId: 'ami-0bcf5425cdc1d8a85'
+         - instType: 't2.micro'
+         - region: 'ap-south-1'
+         - sg: 'launch-wizard-4'
+         - key: 'Mumbaikey'
+         - vpcSubnet: 'subnet-933930fb' 
+
+  tasks:
      - name: "launching the ec2 Instance master node"
        ec2_instance:
            image_id: "{{imageId}}"
@@ -13,6 +21,7 @@
               Name: "master"
            key_name: "{{key}}"
            vpc_subnet_id: "{{vpcSubnet}}"
+
      - name: "launching the ec2 Instance worker node"
        tags: worker
        ec2_instance:
@@ -41,4 +50,9 @@
               Name: "worker-node"
            key_name: "{{key}}"
            vpc_subnet_id: "{{vpcSubnet}}"
+           
+
+
+
+
 

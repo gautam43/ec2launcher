@@ -2,43 +2,43 @@
 # tasks file for ec2_launcher
      - name: "launching the ec2 Instance master node"
        ec2_instance:
-           image_id: "{{imageId}}"
-           instance_type: "{{instType}}"
+           image_id: "{{ imageId }}"
+           instance_type: "{{ instType }}"
            state: present
            network:
              assign_public_ip: True
-           region: "{{region}}"
-           security_group: "{{sg}}"
+           region: "{{ region }}"
+           security_group: "{{ sg }}"
            tags:
               Name: "master"
-           key_name: "{{key}}"
-           vpc_subnet_id: "{{vpcSubnet}}"
+           key_name: "{{ key }}"
+           vpc_subnet_id: "{{ vpcSubnet }}"
      - name: "launching the ec2 Instance worker node"
        tags: worker
        ec2_instance:
-           image_id: '{{imageId}}'
-           instance_type: '{{instType}}'
+           image_id: '{{ imageId }}'
+           instance_type: '{{ instType }}'
            name: "worker node 1"
            network:
              assign_public_ip: True
-           region: "{{region}}"
+           region: "{{ region }}"
            security_group: ""
            tags:
               Name: "worker-node"
-           key_name: "{{key}}"
-           vpc_subnet_id: "{{vpcSubnet}}"
+           key_name: "{{ key }}"
+           vpc_subnet_id: "{{ vpcSubnet }}"
      - name: "launching the ec2 Instance worker node"
        tags: worker
        ec2_instance:
-           image_id: '{{imageId}}'
-           instance_type: '{{instType}}'
+           image_id: '{{ imageId }}'
+           instance_type: '{{ instType }}'
            name: "worker node 2"
            network:
              assign_public_ip: True
-           region: "{{region}}"
-           security_group: "{{sg}}"
+           region: "{{ region }}"
+           security_group: "{{ sg }}"
            tags:
               Name: "worker-node"
-           key_name: "{{key}}"
-           vpc_subnet_id: "{{vpcSubnet}}"
+           key_name: "{{ key }}"
+           vpc_subnet_id: "{{ vpcSubnet }}"
 
